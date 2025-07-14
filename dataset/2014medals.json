@@ -1,0 +1,19 @@
+{
+	"name": "2014medals",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "2014_Medals.csv",
+				"container": "containercs5"
+			}
+		},
+		"schema": []
+	}
+}
