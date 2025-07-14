@@ -1,9 +1,9 @@
 {
-	"name": "pipelineCaseStudy5",
+	"name": "pipelineCaseStudy1",
 	"properties": {
 		"activities": [
 			{
-				"name": "Start time",
+				"name": "start time",
 				"type": "SetVariable",
 				"dependsOn": [],
 				"policy": {
@@ -20,19 +20,20 @@
 				}
 			},
 			{
-				"name": "Get Metadata1",
-				"type": "GetMetadata",
+				"name": "End time",
+				"type": "SetVariable",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"fieldList": []
+					"variableName": "status",
+					"value": {
+						"value": "@utcNow()",
+						"type": "Expression"
+					}
 				}
 			}
 		],
